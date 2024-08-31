@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificados - Jhon Ariel Larico Machaca</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="experiencia.html">Experiencia</a></li>
+            <li><a href="certificados.html" class="active">Certificados</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de Certificados -->
+    <section id="certificados">
+        <h5>Certificados</h5
+            >
+        <div class="certificados-grid">
+            <div class="certificado">
+                <img src="solidpq.png" alt="Certificado 1" class="certificado-imagen" onclick="showCertificate('solidpq.png')">
+                <p>Certificado: Mechanical Desing in Solid Works.</p>
+            </div>
+            <div class="certificado">
+                <img src="Introduccion a la nube.png" alt="Certificado 2" class="certificado-imagen" onclick="showCertificate('Introduccion a la nube.png')">
+                <p>Certificado: Introduction to Cloud.</p>
+            </div>
+            <div class="certificado">
+                <img src="python101.png" alt="Certificado 3" class="certificado-imagen" onclick="showCertificate('python101.png')">
+                <p>Certificado : Python 101 for Data Science.</p>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modal-image">
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Jhon Ariel Larico Machaca. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
