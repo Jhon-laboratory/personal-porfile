@@ -5,10 +5,10 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fefefe; /* Fondo negro para toda la página */
+  background-color: #fefefe;
   color: #fff;
   min-height: 100vh;
-  position: relative; /* Necesario para colocar las partículas correctamente */
+  position: relative;
 }
 
 /* Barra de navegación */
@@ -20,7 +20,7 @@ nav ul {
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: 10; /* Asegura que la barra de navegación esté sobre las partículas */
+  z-index: 10;
 }
 
 nav ul li {
@@ -44,14 +44,15 @@ nav ul li a.active {
   background-color: #373737;
 }
 
+/* Sección de Inicio */
 #inicio {
-  background-image: url('wallpaperbetter.jpg'); /* Imagen de fondo para la sección de inicio */
+  background-image: url('wallpaperbetter.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
   position: relative;
-  z-index: 10; /* Asegura que el contenido esté sobre las partículas */
+  z-index: 10;
 }
 
 .inicio-contenedor {
@@ -59,6 +60,7 @@ nav ul li a.active {
   align-items: center;
   gap: 20px;
   padding: 20px;
+  flex-wrap: wrap;
 }
 
 .foto-cv {
@@ -98,24 +100,24 @@ nav ul li a.active {
 /* Estilo para la sección 'contenido' */
 #contenido {
   display: flex;
-  align-items: center; /* Centra el contenido verticalmente */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  flex-direction: column; /* Asegura que los elementos se alineen verticalmente */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin-top: 20px;
-  padding: 20px; /* Espacio interno para el contenido */
+  padding: 20px;
   position: relative;
-  z-index: 10; /* Asegura que el contenido esté sobre las partículas */
+  z-index: 10;
 }
 
 .contenido-texto {
-  font-family: 'Patrick Hand', cursive;   /* Tipografía manuscrita */
-  font-size: 20px; /* Tamaño de fuente más grande */
-  color: #fff; /* Color del texto */
-  padding: 20px; /* Espacio interno */
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para contraste */
-  border-radius: 8px; /* Bordes redondeados */
-  max-width: 800px; /* Ancho máximo del contenedor */
-  text-align: center; /* Centra el texto dentro del contenedor */
+  font-family: 'Patrick Hand', cursive;
+  font-size: 20px;
+  color: #fff;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  max-width: 800px;
+  text-align: center;
 }
 
 .fotos {
@@ -123,16 +125,16 @@ nav ul li a.active {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 20px; /* Espacio entre las dos imágenes */
-  margin-top: 20px; /* Espacio superior para separar de la sección de texto */
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .fotos img {
-  width: 50%; /* Ajusta el ancho de la imagen al 50% del contenedor */
-  max-width: 300px; /* Tamaño máximo de la imagen */
-  height: auto; /* Mantiene la proporción original de la imagen */
-  flex-shrink: 0; /* Evita que las imágenes se encojan */
-  border-radius: 8px; /* Añade bordes redondeados, ajustable */
+  width: 50%;
+  max-width: 300px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 8px;
 }
 
 h1, h2 {
@@ -155,6 +157,41 @@ footer {
   z-index: 10;
 }
 
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .inicio-contenedor {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .inicio-texto h1 {
+    font-size: 32px;
+  }
+
+  .inicio-texto h3 {
+    font-size: 24px;
+  }
+
+  .inicio-texto p1, .inicio-texto p {
+    font-size: 16px;
+  }
+
+  .foto-cv {
+    max-width: 150px;
+  }
+
+  .fotos {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .fotos img {
+    width: 80%;
+    max-width: 200px;
+  }
+}
+
+/* Certificado seccion */
 #certificados {
   padding: 20px;
 }
@@ -215,8 +252,42 @@ footer {
   cursor: pointer;
 }
 
-/* Sección Experiencia */
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .certificados-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 
+  .certificado {
+    padding: 15px;
+  }
+
+  .certificado-imagen {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificados-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .certificado-imagen {
+    width: 100%;
+    max-width: 180px;
+  }
+}
+
+
+/* Sección Experiencia */
 #experiencia {
   display: flex;
   flex-direction: column;
@@ -355,6 +426,54 @@ footer {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-header .info {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .card-header .logo img {
+    max-width: 150px;
+  }
+
+  .card-header .logo1 img {
+    max-width: 200px;
+  }
+
+  .card-body {
+    flex-direction: column;
+  }
+
+  .certificado-img {
+    max-width: 150px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-header {
+    padding: 15px;
+  }
+
+  .card-header h2 {
+    font-size: 1.2em;
+  }
+
+  .card-body ul {
+    padding-left: 15px;
+  }
+
+  .certificado-img {
+    max-width: 120px;
+  }
 }
 
 /* Sección de Contacto */
