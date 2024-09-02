@@ -10,8 +10,7 @@ body {
   min-height: 100vh;
   position: relative;
 }
-
-/* Barra de navegación */
+/* Barra de navegación para pantallas grandes */
 nav ul {
   list-style: none;
   margin: 0;
@@ -43,6 +42,49 @@ nav ul li a:hover {
 nav ul li a.active {
   background-color: #373737;
 }
+
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Cambia la dirección del menú a vertical */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+    background-color: #1d1f1e; /* Fondo de la barra de navegación */
+    position: absolute;
+    top: 50px; /* Ajusta la posición del menú debajo del botón */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    display: none; /* Oculta el menú por defecto */
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Añade espacio entre los elementos del menú */
+    width: 100%;
+  }
+
+  nav ul li a {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+  /* Estilo para el botón de menú (hamburguesa) */
+  .menu-toggle {
+    display: block;
+    background-color: #1d1f1e;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    width: 100%;
+  }
+
+  /* Mostrar el menú cuando se activa */
+  .menu-toggle.active + nav ul {
+    display: flex;
+  }
+}
+
 
 /* Sección de Inicio */
 #inicio {
