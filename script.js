@@ -5,6 +5,11 @@ function showCertificate(imageSrc) {
     modalImage.src = imageSrc;
 }
 
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
+  });
+
+  
 function closeModal() {
     var modal = document.getElementById("modal");
     modal.style.display = "none";
