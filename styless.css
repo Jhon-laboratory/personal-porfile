@@ -139,6 +139,73 @@ nav ul li a.active {
   margin: 10px 0;
 }
 
+/*seccion tarjeta de inf*/
+/* Sección tarjeta de información personal */
+
+.tarjeta-personal {
+  background-color: #373737;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.tarjeta-personal h2 {
+  font-family: 'Courier-New', monospace;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #f9f9f9;
+}
+
+.informacion-detalle {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Permite que las columnas se ajusten automáticamente en pantallas pequeñas */
+}
+
+.columna {
+  flex: 1;
+  margin-right: 20px;
+  min-width: 250px; /* Evita que las columnas se vuelvan demasiado pequeñas */
+}
+
+.columna:last-child {
+  margin-right: 0;
+}
+
+.informacion-detalle p {
+  font-family: 'Courier-New', monospace;
+  font-size: 18px;
+  margin: 8px 0;
+  color: #ffffff;
+}
+
+.informacion-detalle p strong {
+  color: #d56000;
+}
+
+/* Estilos para pantallas de móviles */
+@media (max-width: 768px) {
+  .informacion-detalle {
+    flex-direction: column; /* Las columnas se apilan verticalmente en pantallas pequeñas */
+  }
+
+  .columna {
+    margin-right: 0;
+    margin-bottom: 20px; /* Espacio entre columnas cuando están en modo apilado */
+  }
+
+  .tarjeta-personal h2 {
+    font-size: 20px; /* Ajuste del tamaño del título en móviles */
+  }
+
+  .informacion-detalle p {
+    font-size: 16px; /* Ajuste del tamaño del texto en móviles */
+  }
+}
+
+
+
 /* Estilo para la sección 'contenido' */
 #contenido {
   display: flex;
