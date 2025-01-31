@@ -417,12 +417,16 @@ footer {
 }
 
 .card-header {
-  background-image: url('exa.jpg'); /* Reemplaza con la ruta de tu imagen */
-  background-size: cover; /* Ajusta la imagen al tamaño del encabezado */
-  background-position: center; /* Centra la imagen */
-  color: #ffffff; /* Mantiene el texto en blanco */
+  display: flex; /* Asegura que los elementos se ubiquen en fila */
+  justify-content: space-between; /* Distribuye los elementos */
+  align-items: center; /* Centra verticalmente */
+  background-image: url('exa.jpg'); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
   padding: 20px;
 }
+
 
 
 .card-header .info {
