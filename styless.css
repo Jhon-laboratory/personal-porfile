@@ -446,7 +446,9 @@ footer {
 .card-header .referencias p {
   font-size: 0.9em;
 }
-
+.card-header .logo {
+  margin-left: auto; /* Empuja el logo a la derecha */
+}
 .card-header .logo img {
   max-width: 200px;
   height: auto;
